@@ -2,6 +2,10 @@
     font-family: poppins;
     src: url(../vendors/font/poppins/Poppins-Regular.ttf);
 }
+@font-face {
+    font-family: poppinsL;
+    src: url(../vendors/font/poppins/Poppins-Light.ttf);
+}
 
 * {
     padding: 0;
@@ -80,8 +84,6 @@ header {
     //Hero Section
     .hero-section {
         .container-fluid {
-            position: relative;
-            overflow: hidden;
             height: 100vh;
             background: url("../assets/images/chair-and-table-with-lamp.png")
                 no-repeat;
@@ -102,7 +104,7 @@ header {
 
                 .text-container {
                     .display-3 {
-                        font-weight: 900;
+                        font-weight: 500;
                         inline-size: 60%;
                         word-wrap: break-word;
                     }
@@ -126,8 +128,179 @@ header {
             }
         }
     }
+
+    //Top Product Section
+    .top-product-section {
+        margin: 100px 0;
+        .text-title {
+            margin-bottom: 100px;
+            text-align: center;
+            h5 {
+                font-family: poppinsL;
+            }
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+
+            .row {
+                .col-6 {
+                    .card {
+                        margin-bottom: 40px;
+                        border-bottom-left-radius: 30px;
+                        border-bottom-right-radius: 30px;
+                        box-shadow: 10px 8px 15px #d6d6d6;
+                        .product-image-card {
+                            img {
+                                position: relative;
+                            }
+                            p {
+                                position: absolute;
+                                top: 5px;
+                                right: 5px;
+                                text-transform: uppercase;
+                                background-color: #ef8b59;
+                                color: #fff;
+                                padding: 3px 20px;
+                            }
+                        }
+
+                        .card-body {
+                            .card-title {
+                                font-size: clamp(10px, 3vw, 16px);
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                opacity: 0.8;
+                            }
+
+                            .card-text {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                margin: 20px 0 10px 0;
+                                font-size: clamp(16px, 4vw, 20px);
+                            }
+
+                            .product-price {
+                                font-size: clamp(12px, 4vw, 20px);
+                                span {
+                                    opacity: 0.5;
+                                    margin-right: 10px;
+                                }
+                                a {
+                                    color: #ef8b59;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 // Media Queries
+
+//XL
+@media (max-width: 1200px) {
+    .main {
+        //Hero Section
+        .hero-section {
+            .container-fluid {
+                background-position: right center;
+                background-size: 50%;
+
+                .container {
+                    .text-container {
+                        .display-3 {
+                            inline-size: 70%;
+                            word-wrap: break-word;
+                        }
+                        h5 {
+                            inline-size: 70%;
+                            word-wrap: break-word;
+                            margin: 30px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//lg
+@media (max-width: 992px) {
+    .main {
+        //Hero Section
+        .hero-section {
+            .container-fluid {
+                height: 60vh;
+                background-color: #f9f3eb;
+                background-position: right center;
+                background-size: 55%;
+
+                .container {
+                    .text-container {
+                        .display-3 {
+                            font-size: 36px;
+                            inline-size: 60%;
+                            word-wrap: break-word;
+                        }
+                        h5 {
+                            font-size: 16px;
+                            inline-size: 60%;
+                            word-wrap: break-word;
+                            margin: 30px 0;
+                        }
+                        .btn {
+                            padding: 10px 30px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//md
+@media (max-width: 768px) {
+    .main {
+        //Hero Section
+        .hero-section {
+            .container-fluid {
+                height: 70vh;
+                background-position: right 50%;
+                background-size: 40%;
+
+                .container {
+                    .text-container {
+                        .display-3 {
+                            font-size: 36px;
+                            inline-size: 80%;
+                            word-wrap: break-word;
+                        }
+                        h5 {
+                            font-size: 14px;
+                            inline-size: 70%;
+                            word-wrap: break-word;
+
+                            margin: 20px 0;
+                        }
+                        .btn {
+                            padding: 8px 20px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//sm
 @media (max-width: 576px) {
     header {
         .navbar {
@@ -149,6 +322,104 @@ header {
                                 text-transform: none;
                                 margin: 0 0 0 10px;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        //Hero Section
+        .hero-section {
+            .container-fluid {
+                height: 90vh;
+                background-position-x: center;
+                background-position-y: 20%;
+                background-size: contain;
+
+                .container {
+                    justify-content: flex-end;
+
+                    .text-container {
+                        padding-bottom: 100px;
+                        .display-3 {
+                            font-size: 18px;
+                            inline-size: 100%;
+                        }
+                        h5 {
+                            font-size: 12px;
+                            inline-size: 100%;
+                            text-align: justify;
+                            margin: 20px 0;
+                        }
+                        .btn {
+                            padding: 8px 20px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//XS
+@media (max-width: 320px) {
+    header {
+        .navbar {
+            padding: 15px 20px;
+            .container {
+                .navbar-nav {
+                    .d-xs-none {
+                        display: none;
+                    }
+                }
+
+                .offcanvas {
+                    .offcanvas-body {
+                        .navbar-nav {
+                            .nav-item {
+                                a {
+                                    font-size: 16px;
+                                }
+                                text-transform: none;
+                                margin: 0 0 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        //Hero Section
+        .hero-section {
+            .container-fluid {
+                height: 100vh;
+                background-position-x: center;
+                background-position-y: 20%;
+                background-size: contain;
+
+                .container {
+                    justify-content: flex-end;
+
+                    .text-container {
+                        padding-bottom: 80px;
+                        .display-3 {
+                            font-size: 16px;
+                            inline-size: 100%;
+                        }
+                        h5 {
+                            font-size: 12px;
+                            inline-size: 100%;
+                            text-align: justify;
+                            margin: 20px 0;
+                        }
+                        .btn {
+                            padding: 8px 20px;
+                            font-weight: 100;
                         }
                     }
                 }

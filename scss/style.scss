@@ -15,6 +15,7 @@
 html,
 body {
     color: #2d3436;
+    background-color: #fafafa;
 }
 
 //Header and Nav
@@ -135,8 +136,12 @@ header {
         .text-title {
             margin-bottom: 100px;
             text-align: center;
+            h2 {
+                font-size: clamp(16px, 3vw, 32px);
+            }
             h5 {
                 font-family: poppinsL;
+                font-size: clamp(12px, 2vw, 1rem);
             }
         }
         .container {
@@ -183,10 +188,12 @@ header {
                             }
 
                             .product-price {
-                                font-size: clamp(12px, 4vw, 20px);
+                                font-size: clamp(12px, 3vw, 20px);
                                 span {
                                     opacity: 0.5;
                                     margin-right: 10px;
+                                    font-size: clamp(10px, 3vw, 15px);
+                                    text-decoration: line-through;
                                 }
                                 a {
                                     color: #ef8b59;
@@ -199,8 +206,280 @@ header {
             }
         }
     }
-}
 
+    //Product Grid Items
+    .product-grid-section {
+        background-color: #f9f3eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            margin: 100px 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 15px;
+
+            div > img {
+                width: 100%;
+            }
+
+            .product-items-display-ls-top {
+                grid-column: 1/7;
+                grid-row: 1/2;
+            }
+            .product-items-display-portrait-top-l {
+                grid-column: 7/10;
+                grid-row: 1/2;
+            }
+            .product-items-display-portrait-top-r {
+                grid-column: 10/-1;
+                grid-row: 1/2;
+            }
+            .product-items-display-portrait-bot-l {
+                grid-column: 1/4;
+                grid-row: 2/3;
+                align-self: flex-end;
+            }
+            .product-items-display-portrait-bot-r {
+                grid-column: 4/7;
+                grid-row: 2/3;
+                align-self: flex-end;
+            }
+            .product-items-display-ls-bot {
+                grid-column: 7/-1;
+                grid-row: 2/3;
+                position: relative;
+                a {
+                    position: absolute;
+                    left: 20px;
+                    bottom: 20px;
+
+                    background-color: #fafafa;
+                    border: none;
+                    padding: 10px 50px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    //Featured Deals Section
+    .featured-deals-section {
+        margin: 100px 0;
+        .text-title {
+            margin-bottom: 100px;
+            text-align: center;
+            h2 {
+                font-size: clamp(16px, 3vw, 32px);
+            }
+            h5 {
+                font-family: poppinsL;
+                font-size: clamp(12px, 2vw, 1rem);
+            }
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+
+            .row {
+                .col-6 {
+                    .card {
+                        margin-bottom: 40px;
+                        border-top-left-radius: 30px;
+                        border-top-right-radius: 30px;
+                        box-shadow: 10px 8px 15px #d6d6d6;
+                        overflow: hidden;
+                        .product-image-card {
+                            img {
+                                position: relative;
+                            }
+                        }
+
+                        .card-body {
+                            .card-title {
+                                font-size: clamp(10px, 3vw, 16px);
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                opacity: 0.8;
+                            }
+
+                            .card-text {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                margin: 20px 0 10px 0;
+                                font-size: clamp(16px, 4vw, 20px);
+                            }
+
+                            .product-price {
+                                font-size: clamp(12px, 3vw, 20px);
+                                span {
+                                    opacity: 0.5;
+                                    margin-right: 10px;
+                                    text-decoration: line-through;
+                                    font-size: clamp(10px, 3vw, 15px);
+                                }
+                                a {
+                                    color: #ef8b59;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Advertise Section
+    .ads-section {
+        margin: 100px 0;
+        .container-fluid {
+            .row {
+                .bg-modern-kitchen {
+                    background-image: url("../assets/images/modern-kitchen.png");
+                    background-position: right;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 50vh;
+                }
+                .ads-detail {
+                    background-color: #ef8b59;
+                    display: flex;
+
+                    .text-details-col {
+                        align-self: center;
+                        padding: 0 20px;
+                        text-align: justify;
+                        color: #fafafa;
+                        h2 {
+                            margin-bottom: 50px;
+                        }
+                        p {
+                            font-size: clamp(12px, 3vw, 0.9rem);
+                            font-family: poppinsL;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Latest News Section
+    .latest-news-section {
+        margin-bottom: 100px;
+        .text-title {
+            margin-bottom: 100px;
+            text-align: center;
+            h2 {
+                font-size: clamp(16px, 3vw, 32px);
+            }
+            h5 {
+                font-family: poppinsL;
+                font-size: clamp(12px, 2vw, 1rem);
+            }
+        }
+        .row {
+            .col-6 {
+                .card {
+                    .product-image-card {
+                        position: relative;
+                    }
+                    .card-hero-icon {
+                        position: absolute;
+                        left: 20px;
+                        bottom: -20px;
+
+                        img {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .card-body {
+                        .card-date {
+                            .card-posted-date {
+                                margin-top: 20px;
+                                span {
+                                    font-family: poppinsL;
+                                    font-size: clamp(12px, 3vw, 0.9rem);
+                                }
+                            }
+                        }
+                        .card-title {
+                            margin-top: 20px;
+                            .card-text {
+                                font-size: clamp(16px, 4vw, 20px);
+                            }
+                        }
+                        .latest-news-detail {
+                            p {
+                                font-family: poppinsL;
+                                text-align: justify;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-size: clamp(12px, 3vw, 0.9rem);
+                            }
+                        }
+                    }
+
+                    .card-footer {
+                        background-color: transparent;
+                        padding: 1rem;
+                        a {
+                            text-decoration: none;
+                            color: #ef8b59;
+                            text-transform: uppercase;
+                            font-size: clamp(12px, 3vw, 0.9rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Newsletter Section
+    .newsletter-section {
+        margin-bottom: 100px;
+        .text-title {
+            margin-bottom: 50px;
+            text-align: center;
+            h2 {
+                font-size: clamp(16px, 3vw, 32px);
+            }
+            h5 {
+                font-family: poppinsL;
+                font-size: clamp(12px, 2vw, 1rem);
+            }
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            .input-group {
+                width: 60%;
+                .form-control {
+                    padding: 12px 20px;
+                    border-bottom-left-radius: 30px;
+                    border-top-left-radius: 30px;
+                }
+
+                .btn {
+                    background-color: #222222;
+                    color: white;
+                    border-bottom-right-radius: 30px;
+                    border-top-right-radius: 30px;
+                    padding: 0 50px;
+                }
+            }
+        }
+    }
+}
 // Media Queries
 
 //XL
@@ -262,6 +541,88 @@ header {
                 }
             }
         }
+
+        //Top Product Section
+        .top-product-section {
+            margin: 50px 0;
+            .text-title {
+                margin-bottom: 50px;
+            }
+        }
+
+        //Featured Deals Section
+        .featured-deals-section {
+            margin: 50px 0;
+            .text-title {
+                margin-bottom: 50px;
+            }
+        }
+
+        //Advertise Section
+        .ads-section {
+            margin: 100px 0;
+            .container-fluid {
+                .row {
+                    .bg-modern-kitchen {
+                        height: 45vh;
+                    }
+                    .ads-detail {
+                        .text-details-col {
+                            h2 {
+                                margin-top: 30px;
+                                margin-bottom: 30px;
+                            }
+                            p {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Latest News Section
+        .latest-news-section {
+            margin-bottom: 100px;
+            .text-title {
+                margin-bottom: 50px;
+            }
+        }
+
+        // Newsletter Section
+        .newsletter-section {
+            margin-bottom: 50px;
+            .text-title {
+                margin-bottom: 30px;
+                text-align: center;
+                h2 {
+                    font-size: clamp(16px, 3vw, 32px);
+                }
+                h5 {
+                    font-family: poppinsL;
+                    font-size: clamp(12px, 2vw, 1rem);
+                }
+            }
+
+            form {
+                .input-group {
+                    width: 90%;
+
+                    .form-control {
+                        font-size: clamp(12px, 2vw, 1rem);
+                    }
+
+                    .btn {
+                        background-color: #222222;
+                        color: white;
+                        border-bottom-right-radius: 30px;
+                        border-top-right-radius: 30px;
+                        padding: 0 30px;
+                        font-size: clamp(12px, 2vw, 1rem);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -295,6 +656,105 @@ header {
                         }
                     }
                 }
+            }
+        }
+
+        //Top Product Section
+        .top-product-section {
+            margin: 50px 0;
+            .text-title {
+                margin-bottom: 50px;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+
+                .row {
+                    .col-6 {
+                        .card {
+                            margin-bottom: 40px;
+                            border-bottom-left-radius: 30px;
+                            border-bottom-right-radius: 30px;
+                            box-shadow: 10px 8px 15px #d6d6d6;
+                            .product-image-card {
+                                img {
+                                    position: relative;
+                                }
+                                p {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                    text-transform: uppercase;
+                                    background-color: #ef8b59;
+                                    color: #fff;
+                                    padding: 3px 20px;
+                                }
+                            }
+
+                            .card-body {
+                                .card-title {
+                                    font-size: clamp(10px, 4vw, 16px);
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    opacity: 0.8;
+                                }
+
+                                .card-text {
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    margin: 20px 0 10px 0;
+                                    font-size: clamp(16px, 4vw, 20px);
+                                }
+
+                                .product-price {
+                                    font-size: clamp(12px, 4vw, 20px);
+                                    span {
+                                        opacity: 0.5;
+                                        margin-right: 10px;
+                                        text-decoration: line-through;
+                                    }
+                                    a {
+                                        color: #ef8b59;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Advertise Section
+        .ads-section {
+            margin: 50px 0;
+            .container-fluid {
+                .row {
+                    .bg-modern-kitchen {
+                        height: 40vh;
+                    }
+                    .ads-detail {
+                        .text-details-col {
+                            h2 {
+                                margin-top: 30px;
+                                margin-bottom: 30px;
+                            }
+                            p {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Latest News Section
+        .latest-news-section {
+            margin-bottom: 50px;
+            .text-title {
+                margin-bottom: 50px;
             }
         }
     }
@@ -361,6 +821,122 @@ header {
                 }
             }
         }
+
+        //Product Grid Items
+        .product-grid-section {
+            .container {
+                margin: 50px 0;
+
+                .product-items-display-ls-top {
+                    grid-column: 1/-1;
+                    grid-row: 3/4;
+                }
+                .product-items-display-portrait-top-l {
+                    grid-column: 1/7;
+                    grid-row: 2/3;
+                }
+                .product-items-display-portrait-top-r {
+                    grid-column: 7/-1;
+                    grid-row: 2/3;
+                }
+                .product-items-display-portrait-bot-l {
+                    grid-column: 1/7;
+                    grid-row: 4/5;
+                    align-self: center;
+                }
+                .product-items-display-portrait-bot-r {
+                    grid-column: 7/-1;
+                    grid-row: 4/5;
+                    align-self: center;
+                }
+                .product-items-display-ls-bot {
+                    grid-column: 1/-1;
+                    grid-row: 1/2;
+
+                    a {
+                        position: absolute;
+                        right: 20px;
+                        bottom: 20px;
+                        padding: 5px 20px;
+                    }
+                }
+            }
+        }
+
+        //Advertise Section
+        .ads-section {
+            margin: 50px 0;
+            .container-fluid {
+                .row {
+                    .bg-modern-kitchen {
+                        height: 40vh;
+                    }
+                    .ads-detail {
+                        .text-details-col {
+                            padding: 0 10px;
+                            h2 {
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                            }
+                            p {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Latest News Section
+        .latest-news-section {
+            margin-bottom: 50px;
+            .text-title {
+                margin-bottom: 50px;
+            }
+            .row {
+                .col-xs-12 {
+                    margin-bottom: 20px;
+                    flex: 0 0 auto;
+                    width: 100%;
+                }
+            }
+        }
+
+        // Newsletter Section
+        .newsletter-section {
+            margin-bottom: 50px;
+            .text-title {
+                margin-bottom: 30px;
+                text-align: center;
+                h2 {
+                    font-size: clamp(16px, 3vw, 32px);
+                }
+                h5 {
+                    font-family: poppinsL;
+                    font-size: clamp(12px, 2vw, 1rem);
+                }
+            }
+
+            form {
+                .input-group {
+                    width: 100%;
+
+                    .form-control {
+                        padding: 10px;
+                        font-size: clamp(12px, 2vw, 1rem);
+                    }
+
+                    .btn {
+                        background-color: #222222;
+                        color: white;
+                        border-bottom-right-radius: 30px;
+                        border-top-right-radius: 30px;
+                        padding: 0 30px;
+                        font-size: clamp(12px, 2vw, 1rem);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -423,6 +999,22 @@ header {
                         }
                     }
                 }
+            }
+        }
+
+        //Top Product Section
+        .top-product-section {
+            margin: 50px 0;
+            .text-title {
+                margin-bottom: 50px;
+            }
+        }
+
+        //Featured Deals Section
+        .featured-deals-section {
+            margin: 50px 0;
+            .text-title {
+                margin-bottom: 50px;
             }
         }
     }

@@ -9,11 +9,13 @@
             rel="stylesheet"
             href="./vendors/bootstrap/dist/css/bootstrap.min.css"
         />
-
+      
         <title>Homely</title>
         <link rel="shortcut icon" href="#" type="image/x-icon" />
     </head>
     <body>
+        
+
         <!-- Navigation bar  -->
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -112,6 +114,7 @@
 
         <!-- Main Contents  -->
         <div class="main">
+            <button id="back-to-top-btn"><i class="fas fa-chevron-up"></i></button>
             <!-- hero-section  -->
             <section class="hero-section">
                 <div class="container-fluid">
@@ -667,10 +670,15 @@
             </section>
 
             <!-- footer section -->
-            <!-- <section class="footer-section">
+            <section class="footer-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6 col-xxl-3 col-lg-3 col-md-3">
+                        <div
+                            class="
+                                brand-logo-description
+                                col-12 col-xxl-3 col-lg-3 col-md-3
+                            "
+                        >
                             <div class="display-6">Home<span>ly</span></div>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur
@@ -678,7 +686,9 @@
                                 consectetur adipisicing elit.
                             </p>
                         </div>
-                        <div class="col-6 col-xxl-3 col-lg-3 col-md-3">
+                        <div
+                            class="about-col col-4 col-xxl-3 col-lg-3 col-md-3"
+                        >
                             <ul>
                                 <li><h5>About us</h5></li>
                                 <li>Journal</li>
@@ -686,7 +696,12 @@
                                 <li>Store Location</li>
                             </ul>
                         </div>
-                        <div class="col-6 col-xxl-3 col-lg-3 col-md-3">
+                        <div
+                            class="
+                                contact-col
+                                col-4 col-xxl-3 col-lg-3 col-md-3
+                            "
+                        >
                             <ul>
                                 <li><h5>Contact us</h5></li>
                                 <li>Salawag, Dasmariñas, Cavite</li>
@@ -694,7 +709,7 @@
                                 <li>homely@gmail.com</li>
                             </ul>
                         </div>
-                        <div class="col-6 col-xxl-3 col-lg-3 col-md-3">
+                        <div class="help-col col-4 col-xxl-3 col-lg-3 col-md-3">
                             <ul>
                                 <li><h5>Help</h5></li>
                                 <li>FAQ's</li>
@@ -705,7 +720,24 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
+
+            <!-- footer for copyright -->
+            <section class="copyright-section">
+                <div class="container">
+                    <div class="copyright-text">
+                        <small>&#169 Copyright Homely 2021. All Right Reserved.</small>
+                    </div>
+
+                    <!-- <div class="billing-method">
+                        <img src="./assets/images/billing/paypal.png" alt="Paypal Logo" loading="lazy">
+                        <img src="./assets/images/billing/hsbc.png" alt="HSBC Logo" loading="lazy">
+                        <img src="./assets/images/billing/masterc.png" alt="Master Card Logo" loading="lazy">
+                    </div> -->
+                </div>
+
+            </section>
+
         </div>
 
         <script src="./vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -714,5 +746,7 @@
         <script src="./vendors/font/fontawesome-free/js/regular.js"></script>
         <script src="./vendors/font/fontawesome-free/js/fontawesome.js"></script>
         <script src="./js/nav-scroll.js"></script>
+        <script src="./js/scroll-to-top.js"></script>
+        
     </body>
 </html>

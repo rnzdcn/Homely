@@ -82,6 +82,32 @@ header {
 
 //Main Contents
 .main {
+    #back-to-top-btn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 26px;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        color: rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.9);
+        border-radius: 50%;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        transition-property: background-color, color;
+        z-index: 999;
+    }
+    #back-to-top-btn:hover,
+    #back-to-top-btn:focus {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
     //Hero Section
     .hero-section {
         .container-fluid {
@@ -423,8 +449,22 @@ header {
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                                 white-space: nowrap;
+                                // position: relative;
                                 font-size: clamp(12px, 3vw, 0.9rem);
                             }
+                            // p:after {
+                            //     content: "";
+                            //     position: absolute;
+                            //     bottom: 0;
+                            //     right: 0;
+                            //     height: 2em;
+                            //     width: 50px;
+                            //     background: linear-gradient(
+                            //         to right,
+                            //         transparent,
+                            //         #fff 80%
+                            //     );
+                            // }
                         }
                     }
 
@@ -468,6 +508,9 @@ header {
                     border-bottom-left-radius: 30px;
                     border-top-left-radius: 30px;
                 }
+                .form-control:focus {
+                    box-shadow: 1px 1px 1px white;
+                }
 
                 .btn {
                     background-color: #222222;
@@ -476,7 +519,76 @@ header {
                     border-top-right-radius: 30px;
                     padding: 0 50px;
                 }
+
+                .btn:focus {
+                    box-shadow: 1px 1px 1px white;
+                }
             }
+        }
+    }
+
+    //Footer Section
+    .footer-section {
+        padding: 50px 0;
+        background-color: #f9f3eb;
+
+        .container {
+            .row {
+                ul > li {
+                    list-style: none;
+                    font-family: poppinsL;
+                    line-height: 2;
+                    font-size: clamp(12px, 1vw, 1rem);
+                }
+                .brand-logo-description {
+                    .display-6 {
+                        span {
+                            color: #ef8b59;
+                        }
+                    }
+                    p {
+                        margin-top: 20px;
+                        text-align: justify;
+                        font-family: poppinsL;
+                        font-size: clamp(12px, 1vw, 1rem);
+                    }
+                }
+
+                .about-col,
+                .contact-col,
+                .help-col {
+                    display: flex;
+                    justify-content: center;
+                    h5 {
+                        margin: 20px 0 20px 0;
+                        font-size: clamp(14px, 2vw, 1.25rem);
+                    }
+                }
+            }
+        }
+    }
+
+    //Footer for Copyright Section
+    .copyright-section {
+        font-family: poppinsL;
+        padding: 10px 0;
+        background-color: #222222;
+        color: #fafafa;
+        .container {
+            display: flex;
+            justify-content: center;
+            .copyright-text {
+                align-self: center;
+                font-size: clamp(10px, 1vw, 0.7rem);
+            }
+            // .billing-method {
+            //     margin-left: auto;
+            //     img {
+            //         width: 60px;
+            //         height: auto;
+            //         margin: 0 20px;
+            //     }
+            // }
         }
     }
 }
@@ -757,6 +869,29 @@ header {
                 margin-bottom: 50px;
             }
         }
+
+        //Footer Section
+        .footer-section {
+            padding: 40px 0;
+
+            .container {
+                .row {
+                    ul {
+                        padding-left: 0;
+                    }
+
+                    .about-col,
+                    .contact-col,
+                    .help-col {
+                        display: flex;
+                        justify-content: start;
+                        h5 {
+                            margin: 15px 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -790,6 +925,25 @@ header {
     }
 
     .main {
+        #back-to-top-btn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 15px;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.9);
+            cursor: pointer;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.9);
+            border-radius: 50%;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-property: background-color, color;
+            z-index: 999;
+        }
         //Hero Section
         .hero-section {
             .container-fluid {
@@ -933,6 +1087,51 @@ header {
                         border-top-right-radius: 30px;
                         padding: 0 30px;
                         font-size: clamp(12px, 2vw, 1rem);
+                    }
+                }
+            }
+        }
+
+        //Footer Section
+        .footer-section {
+            padding: 20px 0;
+
+            .container {
+                color: rgba(0, 0, 0, 0.9);
+                .row {
+                    ul {
+                        padding-left: 10px;
+                    }
+                    ul > li {
+                        line-height: 1.5;
+                    }
+
+                    .brand-logo-description {
+                        flex-direction: column;
+                        .display-6 {
+                            text-align: start;
+                        }
+                        p {
+                            text-align: justify;
+                        }
+                    }
+
+                    .about-col {
+                        margin-top: 40px;
+                    }
+
+                    .brand-logo-description,
+                    .about-col,
+                    .contact-col,
+                    .help-col {
+                        flex: 0 0 auto;
+                        width: 50%;
+                        display: flex;
+                        justify-content: start;
+
+                        h5 {
+                            margin: 12px 0;
+                        }
                     }
                 }
             }
